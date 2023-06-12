@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from page_objects.my_dashboard import MyDashboard
 from utitlities.web_ui.base_page import BasePage
 
 
@@ -21,9 +22,12 @@ class LoginPage(BasePage):
 
     def set_user_email(self, email):
         self.send_keys(self.__email_input, email)
+        return self
 
     def set_user_password(self, password):
         self.send_keys(self.__password_input, password)
+        return self
 
     def click_login_button(self):
         self.click(self.__login_button)
+        #return MyDashboard(self.__diver)

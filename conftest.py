@@ -1,7 +1,7 @@
 import pytest
 from selenium.webdriver.support.wait import WebDriverWait
 
-from page_objects.My_Dashboard import MyDashboard
+from page_objects.my_dashboard import MyDashboard
 from page_objects.login_page import LoginPage
 from utitlities.web_ui.driver_factory import DriverFactory
 
